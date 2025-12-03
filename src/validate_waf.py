@@ -292,7 +292,7 @@ def main() -> None:
         "--root",
         type=Path,
         #required=True,
-        default=Path("/"),
+        default=Path(""),
         help="Base directory containing the template and WAF folder",
     )
     parser.add_argument(
