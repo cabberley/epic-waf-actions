@@ -36,9 +36,9 @@ function main {
     #source ${scriptDir}/waf.sh
 
     #if [[ "${waf_run_validate_yaml_content}" == 1 || "${waf_run_validate_yaml_content}" == 0 ]]; then
-        source ${scriptDir}/waf-validate.sh
-        parse_inputs
-        waf-validate 
+        #source ${scriptDir}/waf-validate.sh
+        #parse_inputs
+        #waf-validate 
     #fi
     #if [[ "${waf_run_create_excel_file}" == 1 || "${waf_run_create_excel_file}" == 0 ]]; then
         source ${scriptDir}/waf-excel.sh
