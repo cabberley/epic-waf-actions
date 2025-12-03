@@ -1,0 +1,19 @@
+---
+# action.yaml
+name: 'Epic WAF Github Action'
+author: 'cabberley <chris@abberley.com.au>'
+description: 'Github action for Epic Waf - various tolls to generate and validate WAF data'
+branding:
+  icon: 'sliders'
+  color: 'green'
+inputs:
+  waf_file_or_dir:
+    description: 'File or Directory to do validation on'
+    required: false
+    default: 'WAF'
+outputs:
+  waf_output:
+    description: 'Output of action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
