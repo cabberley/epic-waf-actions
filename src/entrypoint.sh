@@ -1,7 +1,8 @@
 #!/bin/sh
 
 function parse_inputs {
-    
+    echo "waf: parse INPUT: waf validate on ${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}."
+    echo "waf: parse INPUT: waf create excel ${INPUT_WAF_RUN_CREATE_EXCEL_FILE}."
     waf_file_or_dir=""
     if [ "${INPUT_WAF_FILE_OR_DIR}" != "" ] || [ "${INPUT_WAF_FILE_OR_DIR}" != "." ]; then
         waf_file_or_dir="--root ${INPUT_WAF_FILE_OR_DIR}"
@@ -28,14 +29,18 @@ function parse_inputs {
     if [[ "${INPUT_WAF_RUN_CREATE_EXCEL_FILE}" == "1" || "${INPUT_WAF_RUN_CREATE_EXCEL_FILE}" == "true" ]]; then
         waf_run_create_excel_file=1
     fi
+    echo "waf: parse outPUT: waf validate on ${waf_run_validate_yaml_content}."
+    echo "waf: parse outPUT: waf create excel ${waf_run_create_excel_file}."
 }
 
 function main {
 
     scriptDir=$(dirname ${0})
     #source ${scriptDir}/waf.sh
-    echo "waf: info: waf validate on ${waf_run_validate_yaml_content}."
-    echo "waf: info: waf create excel ${waf_run_create_excel_file}."
+    echo "waf: info: waf validate on ${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}."
+    echo "waf: info: waf create excel ${INPUT_WAF_RUN_CREATE_EXCEL_FILE}."
+    echo "waf: info outPUT: waf validate on ${waf_run_validate_yaml_content}."
+    echo "waf: info outPUT: waf create excel ${waf_run_create_excel_file}."
     
     #if [[ "${waf_run_validate_yaml_content}" == 1 || "${waf_run_validate_yaml_content}" == 0 ]]; then
     if [[ "${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}" == "1" || "${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}" == "true" ]]; then
