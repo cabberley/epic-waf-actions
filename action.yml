@@ -11,6 +11,10 @@ inputs:
     description: 'File or Directory to do validation on'
     required: false
     default: 'WAF'
+  yamllint_comment:
+    description: 'Comment output'
+    required: false
+    default: 'false'
 outputs:
   waf_output:
     description: 'Output of action'
