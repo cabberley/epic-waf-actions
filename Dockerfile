@@ -9,5 +9,6 @@ RUN pip install yamllint
 RUN ["bin/sh", "-c", "mkdir -p /src"]
 
 COPY ["src", "/src/"]
+RUN chmod -R +x /src
 
 ENTRYPOINT ["/src/entrypoint.sh"]
