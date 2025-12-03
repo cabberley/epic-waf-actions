@@ -4,7 +4,7 @@ function parse_inputs {
     
     waf_file_or_dir="WAF"
     if [ "${INPUT_WAF_FILE_OR_DIR}" != "" ] || [ "${INPUT_WAF_FILE_OR_DIR}" != "." ]; then
-        waf_file_or_dir="${INPUT_WAF_FILE_OR_DIR}"
+        waf_file_or_dir="--root ${INPUT_WAF_FILE_OR_DIR}"
     fi
 }
 
