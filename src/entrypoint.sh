@@ -35,16 +35,16 @@ function main {
     scriptDir=$(dirname ${0})
     #source ${scriptDir}/waf.sh
 
-    if [[ "${waf_run_validate_yaml_content}" == 1 || "${waf_run_validate_yaml_content}" == 0 ]]; then
+    #if [[ "${waf_run_validate_yaml_content}" == 1 || "${waf_run_validate_yaml_content}" == 0 ]]; then
         source ${scriptDir}/waf-validate.sh
         parse_inputs
         waf-validate 
-    fi
-    if [[ "${waf_run_create_excel_file}" == 1 || "${waf_run_create_excel_file}" == 0 ]]; then
+    #fi
+    #if [[ "${waf_run_create_excel_file}" == 1 || "${waf_run_create_excel_file}" == 0 ]]; then
         source ${scriptDir}/waf-excel.sh
         parse_inputs
         waf-excel
-    fi
+    #fi
     
 }
 
