@@ -10,7 +10,7 @@ inputs:
   waf_file_or_dir:
     description: 'File or Directory to do validation on'
     required: false
-    default: 'WAF'
+    default: ''
   yamllint_comment:
     description: 'Comment output'
     required: false
