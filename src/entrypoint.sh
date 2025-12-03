@@ -34,7 +34,9 @@ function main {
 
     scriptDir=$(dirname ${0})
     #source ${scriptDir}/waf.sh
-
+    echo "waf: info: waf validate on ${waf_run_validate_yaml_content}."
+    echo "waf: info: waf create excel ${waf_run_create_excel_file}."
+    
     #if [[ "${waf_run_validate_yaml_content}" == 1 || "${waf_run_validate_yaml_content}" == 0 ]]; then
     if [[ "${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}" == "1" || "${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}" == "true" ]]; then
         source ${scriptDir}/waf-validate.sh
