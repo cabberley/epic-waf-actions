@@ -292,7 +292,7 @@ def main() -> None:
         "--root",
         type=Path,
         #required=True,
-        default=Path("C:\\temp\\Epic_WAF_and_GoLive_Reviews-main"),
+        default=Path("/"),
         help="Base directory containing the template and WAF folder",
     )
     parser.add_argument(
