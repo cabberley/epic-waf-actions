@@ -4,7 +4,8 @@ function waf {
 
     # gather output
     echo "waf: info: waf validate on ${waf_file_or_dir}."
-    python /src/validate_waf.py  ${waf_file_or_dir} > lint_result.txt
+    #python /src/validate_waf.py ${waf_file_or_dir} > lint_result.txt
+    python /src/validate_waf.py > lint_result.txt
     lint_exit_code=${?}
 
     # exit code 0 - success
