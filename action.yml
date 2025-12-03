@@ -11,7 +11,15 @@ inputs:
     description: 'File or Directory to do validation on'
     required: false
     default: ''
-  yamllint_comment:
+  waf_run_validate_yaml_content:
+    description: 'Validate the WAF files Yaml Structures'
+    required: false
+    default: 'true'
+  waf_run_create_excel_file:
+    description: 'Create the Excel File from WAF YAML'
+    required: false
+    default: 'false'
+  waf_comment:
     description: 'Comment output'
     required: false
     default: 'false'
