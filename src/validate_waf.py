@@ -396,8 +396,8 @@ def main() -> None:
         else:
             print(f"[OK]   {file_path}")
 
-    #if total_errors:
-     #   sys.exit(1)
+    if total_errors:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
