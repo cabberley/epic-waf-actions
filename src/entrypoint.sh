@@ -36,6 +36,7 @@ function parse_inputs {
 function main {
 
     scriptDir=$(dirname ${0})
+    parse_inputs
     #source ${scriptDir}/waf.sh
     echo "waf: info: waf validate on ${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}."
     echo "waf: info: waf create excel ${INPUT_WAF_RUN_CREATE_EXCEL_FILE}."
@@ -45,13 +46,13 @@ function main {
     #if [[ "${waf_run_validate_yaml_content}" == 1 || "${waf_run_validate_yaml_content}" == 0 ]]; then
     if [[ "${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}" == "1" || "${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}" == "true" ]]; then
         source ${scriptDir}/waf-validate.sh
-        parse_inputs
+        #parse_inputs
         waf-validate 
     fi
     #if [[ "${waf_run_create_excel_file}" == 1 || "${waf_run_create_excel_file}" == 0 ]]; then
     if [[ "${INPUT_WAF_RUN_CREATE_EXCEL_FILE}" == "1" || "${INPUT_WAF_RUN_CREATE_EXCEL_FILE}" == "true" ]]; then
         source ${scriptDir}/waf-excel.sh
-        parse_inputs
+        #parse_inputs
         waf-excel
     fi
     
