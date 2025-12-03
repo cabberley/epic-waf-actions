@@ -36,15 +36,17 @@ function main {
     #source ${scriptDir}/waf.sh
 
     #if [[ "${waf_run_validate_yaml_content}" == 1 || "${waf_run_validate_yaml_content}" == 0 ]]; then
-        #source ${scriptDir}/waf-validate.sh
-        #parse_inputs
-        #waf-validate 
-    #fi
+    if [[ "${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}" == "1" || "${INPUT_WAF_RUN_VALIDATE_YAML_CONTENT}" == "true" ]]; then
+        source ${scriptDir}/waf-validate.sh
+        parse_inputs
+        waf-validate 
+    fi
     #if [[ "${waf_run_create_excel_file}" == 1 || "${waf_run_create_excel_file}" == 0 ]]; then
+    if [[ "${INPUT_WAF_RUN_CREATE_EXCEL_FILE}" == "1" || "${INPUT_WAF_RUN_CREATE_EXCEL_FILE}" == "true" ]]; then
         source ${scriptDir}/waf-excel.sh
         parse_inputs
         waf-excel
-    #fi
+    fi
     
 }
 
