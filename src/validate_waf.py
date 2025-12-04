@@ -298,7 +298,7 @@ def main() -> None:
     parser.add_argument(
         "--template",
         type=Path,
-        default=Path("waf_check_template.yml"),
+        default=Path("toolling/waf_check_template.yml"),
         help="Path to the template file relative to --root (default: waf_check_template.yml)",
     )
     parser.add_argument(
@@ -310,19 +310,19 @@ def main() -> None:
     parser.add_argument(
         "--labels",
         type=Path,
-        default=Path("labels.yml"),
+        default=Path("toolling/labels.yml"),
         help="Relative path to labels.yml defining the allowed label names",
     )
     parser.add_argument(
         "--validations",
         type=Path,
-        default=Path("validations.yml"),
+        default=Path("toolling/validations.yml"),
         help="Relative path to validations.yml describing allowed scalar values",
     )
     parser.add_argument(
         "--epic-resources",
         type=Path,
-        default=Path("epic_resources.yml"),
+        default=Path("toolling/epic_resources.yml"),
         help="Relative path to epic_resources.yml listing allowed resource names",
     )
     args = parser.parse_args()
