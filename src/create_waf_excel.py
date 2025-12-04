@@ -24,7 +24,7 @@ except ModuleNotFoundError as exc:  # pragma: no cover - import guard
     raise SystemExit("PyYAML is required. Install it with 'pip install pyyaml'.") from exc
 
 
-DEFAULT_ROOT = Path(r"C:\temp\Epic_WAF_and_GoLive_Reviews-main")
+DEFAULT_ROOT = Path(r"")
 DEFAULT_TOOLING_SUBDIR = "toolling"
 DEFAULT_TEMPLATE_NAME = "Epic-WAF.xlsm"
 DEFAULT_MAPPING_NAME = "yaml_mapping.yml"
